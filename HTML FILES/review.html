@@ -3,14 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <title>Cillo Reviews</title>
-  <link rel="stylesheet" href="cart_fav.css" />
+  <!-- Link to external stylesheet for cart and favorites styles -->
+  <link rel="stylesheet" href="../CSS FILES/cart_fav.css" />
   <style>
+    /* Reset box-sizing and remove default margin/padding */
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+    /* Body styling with font, background color, text color, and line height */
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #8d8d8d;
@@ -18,6 +21,7 @@
       line-height: 1.6;
     }
 
+    /* Main heading styling */
     h1 {
       font-family: 'Playfair Display', serif;
       font-size: 3rem;
@@ -25,6 +29,7 @@
       margin: 60px 0 30px;
     }
 
+    /* Container for all reviews: grid layout with responsive columns and gaps */
     .reviews-container {
       max-width: 1000px;
       margin: 0 auto;
@@ -34,6 +39,7 @@
       gap: 30px;
     }
 
+    /* Individual review card styling */
     .review-card {
       background: #fff;
       border-radius: 16px;
@@ -42,16 +48,19 @@
       transition: transform 0.3s ease;
     }
 
+    /* Slight scale effect on hover for review cards */
     .review-card:hover {
       transform: scale(1.02);
     }
 
+    /* Review header containing user image and name */
     .review-header {
       display: flex;
       align-items: center;
       margin-bottom: 15px;
     }
 
+    /* User avatar styling */
     .review-header img {
       width: 50px;
       height: 50px;
@@ -60,21 +69,25 @@
       margin-right: 15px;
     }
 
+    /* User name styling */
     .review-header h3 {
       font-size: 1.1rem;
       color: #222;
     }
 
+    /* Star rating color and spacing */
     .review-stars {
       color: gold;
       margin-bottom: 12px;
     }
 
+    /* Review text styling */
     .review-text {
       color: #5c4a49;
       font-size: 1rem;
     }
 
+    /* Responsive adjustments for smaller screens */
     @media (max-width: 600px) {
       h1 {
         font-size: 2rem;
@@ -84,6 +97,7 @@
   </style>
 </head>
 <body>
+  <!-- Header with logo, navigation menu, and search bar -->
   <header>
     <div class="logo">Cillo</div>
     <nav>
@@ -101,20 +115,28 @@
     </div>
   </header>
 
+  <!-- Page main heading -->
   <h1>What Our Customers Say</h1>
 
+  <!-- Container holding all customer reviews -->
   <div class="reviews-container">
+    <!-- Single review card -->
     <div class="review-card">
       <div class="review-header">
+        <!-- User avatar -->
         <img src="https://i.pravatar.cc/50?img=10" alt="User" />
+        <!-- User name -->
         <h3>Sarah Malik</h3>
       </div>
+      <!-- Star rating -->
       <div class="review-stars">★★★★★</div>
+      <!-- Review text -->
       <p class="review-text">
         I absolutely love the quality of Cillo’s shirts. The fabric feels luxurious, and the fit is perfect. Will definitely shop again!
       </p>
     </div>
 
+    <!-- Another review card -->
     <div class="review-card">
       <div class="review-header">
         <img src="https://i.pravatar.cc/50?img=20" alt="User" />
@@ -147,6 +169,7 @@
         Sneakers look amazing, but shipping took a little longer than expected. Still a solid buy overall.
       </p>
     </div>
+
     <div class="review-card">
       <div class="review-header">
         <img src="https://i.pravatar.cc/50?img=50" alt="User" />
@@ -193,4 +216,3 @@
   </div>
 </body>
 </html>
-

@@ -1,44 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Meta and title -->
   <meta charset="UTF-8">
   <title>Cillo Categories</title>
-  <link rel="stylesheet" href="cart_fav.css">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- External CSS files -->
+  <link rel="stylesheet" href="../CSS FILES/cart_fav.css">
+  <link rel="stylesheet" href="../CSS FILES/style.css">
+
+  <!-- Internal CSS styling -->
   <style>
+  /* Reset default box model and spacing */
   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
 
+  /* Base body styling */
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #fafafa;
-    color: #333;
+    background: #fafafa; /* Light background */
+    color: #333; /* Default text color */
   }
 
+  /* Page main heading */
   h1 {
     text-align: center;
     margin: 40px 0 20px;
     font-size: 2.5rem;
-    color: #3a2b2a;
+    color: #3a2b2a; /* Dark brown shade */
   }
 
+  /* Container for category filter buttons */
   .category-buttons {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 12px;
     margin-bottom: 40px;
-    position: sticky;
+    position: sticky; /* Keeps buttons visible on scroll */
     top: 0;
     background: #fff;
     padding: 15px 0;
-    z-index: 1000;
+    z-index: 1000; /* Ensures it's above other content */
     border-bottom: 1px solid #ddd;
   }
 
+  /* Individual category button styling */
   .category-btn {
     background: #3a2b2a;
     color: #fff;
@@ -50,14 +60,16 @@
     transition: all 0.3s ease;
   }
 
+  /* Hover effect on buttons */
   .category-btn:hover {
     background: #555;
-    transform: scale(1.05);
+    transform: scale(1.05); /* Slight zoom */
   }
 
+  /* Wrapper for each product category */
   .category {
     max-width: 1200px;
-    margin: 0 auto 80px;
+    margin: 0 auto 80px; /* Centered with space below */
     padding: 30px 20px;
     display: flex;
     flex-wrap: wrap;
@@ -65,9 +77,10 @@
     justify-content: center;
     background: #fff;
     border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Light card shadow */
   }
 
+  /* Category title styling */
   .category h2 {
     width: 100%;
     font-size: 1.75rem;
@@ -78,6 +91,7 @@
     padding-bottom: 10px;
   }
 
+  /* Individual product card */
   .product-item {
     background: #fdfdfd;
     border: 1px solid #eee;
@@ -88,10 +102,12 @@
     transition: box-shadow 0.3s ease;
   }
 
+  /* Hover shadow effect on product card */
   .product-item:hover {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   }
 
+  /* Container for product images */
   .image-container {
     position: relative;
     width: 100%;
@@ -100,6 +116,7 @@
     border-radius: 10px;
   }
 
+  /* Image setup with overlap positioning */
   .image-container img {
     width: 100%;
     height: 100%;
@@ -110,33 +127,39 @@
     left: 0;
   }
 
+  /* Back image initially hidden */
   .image-container .hover-img {
     opacity: 0;
   }
 
+  /* Show back image on hover */
   .image-container:hover .hover-img {
     opacity: 1;
   }
 
+  /* Hide front image on hover */
   .image-container:hover .main-img {
     opacity: 0;
   }
 
+  /* Product name */
   .product-item h3 {
     font-size: 1.1rem;
     margin: 12px 0 6px;
     color: #222;
   }
 
+  /* Product price */
   .product-item p {
     color: #888;
     font-size: 1rem;
     margin-bottom: 10px;
   }
 
+  /* Responsive styles for mobile screens */
   @media (max-width: 768px) {
     .product-item {
-      width: 90%;
+      width: 90%; /* Take full width on smaller screens */
     }
 
     .category {
@@ -144,18 +167,18 @@
     }
 
     .image-container {
-      height: 200px;
+      height: 200px; /* Reduce image height for phones */
     }
-
-
   }
 </style>
 </head>
 <body>
+  <!-- Header Section -->
   <header>
-    <div class="logo">Cillo</div>
+    <div class="logo">Cillo</div> <!-- Site logo -->
     <nav>
       <ul>
+        <!-- Navigation Links -->
         <li><a href="index.html">Home</a></li>
         <li><a href="index_style.html">Your Style</a></li>
         <li><a href="index_shop.html">Shop</a></li>
@@ -163,14 +186,17 @@
         <li><a href="about.html">About</a></li>
       </ul>
     </nav>
+    <!-- Search Bar -->
     <div class="search-bar">
       <input type="text" placeholder="Search..." />
       <button>🔍</button>
     </div>
   </header>
 
+  <!-- Page Title -->
   <h1>Shop Categories</h1>
 
+  <!-- Category Buttons for Navigation -->
   <div class="category-buttons">
     <button class="category-btn" onclick="scrollToSection('shirts')">Shirts</button>
     <button class="category-btn" onclick="scrollToSection('pants')">Pants</button>
@@ -178,143 +204,166 @@
     <button class="category-btn" onclick="scrollToSection('caps')">Caps</button>
   </div>
 
+  <!-- SHIRTS Category Section -->
   <div id="shirts" class="category">
     <h2>SHIRTS</h2>
+
+    <!-- Product Card 1 -->
     <div class="product-item">
       <div class="image-container">
-        <img src="41.png" alt="Shirt Front" class="main-img">
-        <img src="42.png" alt="Shirt Back" class="hover-img">
-    </div>
+        <img src="../IMG FILES/41.png" alt="Shirt Front" class="main-img">
+        <img src="../IMG FILES/42.png" alt="Shirt Back" class="hover-img">
+      </div>
       <h3>Embroidered Bowling Shirt</h3>
       <p>$734.99</p>
+      <!-- Size Dropdown -->
       <select class="size-selector">
-      <option value="S">Size S</option>
-      <option value="M" selected>Size M</option>
-      <option value="L">Size L</option>
-      <option value="XL">Size XL</option>
+        <option value="S">Size S</option>
+        <option value="M" selected>Size M</option>
+        <option value="L">Size L</option>
+        <option value="XL">Size XL</option>
+      </select>
+      <!-- Action Buttons -->
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="favorite-btn">☆</button>
+    </div>
+
+    <!-- Product Card 2 -->
+    <div class="product-item">
+      <div class="image-container">
+        <img src="../IMG FILES/3.png" alt="Pants Front" class="main-img">
+        <img src="../IMG FILES/4.png" alt="Pants Back" class="hover-img">
+      </div>
+      <h3>Team Rep Tee</h3>
+      <p>$319.29</p>
+      <select class="size-selector">
+        <option value="S">Size S</option>
+        <option value="M" selected>Size M</option>
+        <option value="L">Size L</option>
+        <option value="XL">Size XL</option>
       </select>
       <button class="add-to-cart">Add to Cart</button>
       <button class="favorite-btn">☆</button>
+    </div>
+
+    <!-- Product Card 3 -->
+    <div class="product-item">
+      <div class="image-container">
+        <img src="../IMG FILES/5.png" alt="Shirt Front" class="main-img">
+        <img src="../IMG FILES/6.png" alt="Shirt Back" class="hover-img">
       </div>
-      <div class="product-item">
-            <div class="image-container">
-                <img src="3.png" alt="Pants Front" class="main-img">
-            <img src="4.png" alt="Pants Back" class="hover-img">
-            </div>
-            <h3>Team Rep Tee</h3>
-            <p>$319.29</p>
-            <select class="size-selector">
-            <option value="S">Size S</option>
-            <option value="M" selected>Size M</option>
-            <option value="L">Size L</option>
-            <option value="XL">Size XL</option>
-            </select>
-            <button class="add-to-cart">Add to Cart</button>
-            <button class="favorite-btn">☆</button>
-        </div>
-        
-        <div class="product-item">
-            <div class="image-container">
-                <img src="5.png" alt="Shirt Front" class="main-img">
-                <img src="6.png" alt="Shirt Back" class="hover-img">
-            </div>
-            <h3>Crafted Profile Fox Comfort Tee</h3>
-            <p>$2980.99</p>
-            <select class="size-selector">
-            <option value="S">Size S</option>
-            <option value="M" selected>Size M</option>
-            <option value="L">Size L</option>
-            <option value="XL">Size XL</option>
-            </select>
-            <button class="add-to-cart">Add to Cart</button>
-            <button class="favorite-btn">☆</button>
-        </div>
-        <div class="product-item">
-            <div class="image-container">
-                <img src="7.png" alt="Pants Front" class="main-img">
-                <img src="8.png" alt="Pants Back" class="hover-img">
-            </div>
-            <h3>Pima Cotton Jersey Foulard Collar Tee</h3>
-            <p>$3923.99</p>
-            <select class="size-selector">
-            <option value="S">Size S</option>
-            <option value="M" selected>Size M</option>
-            <option value="L">Size L</option>
-            <option value="XL">Size XL</option>
-            </select>
-            <button class="add-to-cart">Add to Cart</button>
-            <button class="favorite-btn">☆</button>
-        </div>
-               <div class="product-item">
-                <div class="image-container">
-                    <img src="25.png" alt="Shirt Front" class="main-img">
-                    <img src="26.png" alt="Shirt Back" class="hover-img">
-                </div>
-                <h3>Crafted Profile Fox Comfort Tee</h3>
-                <p>$2980.99</p>
-                <select class="size-selector">
-                <option value="S">Size S</option>
-                <option value="M" selected>Size M</option>
-                <option value="L">Size L</option>
-                <option value="XL">Size XL</option>
-                </select>
-                <button class="add-to-cart">Add to Cart</button>
-                <button class="favorite-btn">☆</button>
-            </div>                 
-                       <div class="product-item">
-                <div class="image-container">
-                    <img src="33.png" alt="Shirt Front" class="main-img">
-                    <img src="34.png" alt="Shirt Back" class="hover-img">
-                </div>
-                <h3>Classic Fit T-Shirt</h3>
-                <p>$290.99</p>
-                <select class="size-selector">
-                <option value="S">Size S</option>
-                <option value="M" selected>Size M</option>
-                <option value="L">Size L</option>
-                <option value="XL">Size XL</option>
-                </select>
-                <button class="add-to-cart">Add to Cart</button>
-                <button class="favorite-btn">☆</button>
-            </div>     
+      <h3>Crafted Profile Fox Comfort Tee</h3>
+      <p>$2980.99</p>
+      <select class="size-selector">
+        <option value="S">Size S</option>
+        <option value="M" selected>Size M</option>
+        <option value="L">Size L</option>
+        <option value="XL">Size XL</option>
+      </select>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="favorite-btn">☆</button>
+    </div>
+
+    <!-- Product Card 4 -->
+    <div class="product-item">
+      <div class="image-container">
+        <img src="../IMG FILES/7.png" alt="Pants Front" class="main-img">
+        <img src="../IMG FILES/8.png" alt="Pants Back" class="hover-img">
+      </div>
+      <h3>Pima Cotton Jersey Foulard Collar Tee</h3>
+      <p>$3923.99</p>
+      <select class="size-selector">
+        <option value="S">Size S</option>
+        <option value="M" selected>Size M</option>
+        <option value="L">Size L</option>
+        <option value="XL">Size XL</option>
+      </select>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="favorite-btn">☆</button>
+    </div>
+
+    <!-- Product Card 5 -->
+    <div class="product-item">
+      <div class="image-container">
+        <img src="../IMG FILES/25.png" alt="Shirt Front" class="main-img">
+        <img src="../IMG FILES/26.png" alt="Shirt Back" class="hover-img">
+      </div>
+      <h3>Crafted Profile Fox Comfort Tee</h3>
+      <p>$2980.99</p>
+      <select class="size-selector">
+        <option value="S">Size S</option>
+        <option value="M" selected>Size M</option>
+        <option value="L">Size L</option>
+        <option value="XL">Size XL</option>
+      </select>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="favorite-btn">☆</button>
+    </div>
+
+    <!-- Product Card 6 -->
+    <div class="product-item">
+      <div class="image-container">
+        <img src="../IMG FILES/33.png" alt="Shirt Front" class="main-img">
+        <img src="../IMG FILES/34.png" alt="Shirt Back" class="hover-img">
+      </div>
+      <h3>Classic Fit T-Shirt</h3>
+      <p>$290.99</p>
+      <select class="size-selector">
+        <option value="S">Size S</option>
+        <option value="M" selected>Size M</option>
+        <option value="L">Size L</option>
+        <option value="XL">Size XL</option>
+      </select>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="favorite-btn">☆</button>
+    </div>
+  </div>
+
+  <!-- PANTS Category Section -->
   <div id="pants" class="category">
     <h2>PANTS</h2>
-                <div class="product-item">
-                <div class="image-container">
-                    <img src="27.png" alt="Pants Front" class="main-img">
-                    <img src="28.png" alt="Pants Back" class="hover-img">
-                </div>
-                <h3>Double Pleated Chino Trousers</h3>
-                <p>$3223.99</p>
-                <select class="size-selector">
-                <option value="S">Size S</option>
-                <option value="M" selected>Size M</option>
-                <option value="L">Size L</option>
-                <option value="XL">Size XL</option>
-                </select>
-                <button class="add-to-cart">Add to Cart</button>
-                <button class="favorite-btn">☆</button>
-            </div> 
-            <div class="product-item">
-                <div class="image-container">
-                    <img src="35.png" alt="Pants Front" class="main-img">
-                    <img src="36.png" alt="Pants Back" class="hover-img">
-                </div>
-                <h3>Racing Stable Sweatpants</h3>
-                <p>$39.99</p>
-                <select class="size-selector">
-                <option value="S">Size S</option>
-                <option value="M" selected>Size M</option>
-                <option value="L">Size L</option>
-                <option value="XL">Size XL</option>
-                </select>
-                <button class="add-to-cart">Add to Cart</button>
-                <button class="favorite-btn">☆</button>
-            </div> 
+
+    <!-- Product Card 1 -->
+    <div class="product-item">
+      <div class="image-container">
+        <img src="../IMG FILES/27.png" alt="Pants Front" class="main-img">
+        <img src="../IMG FILES/28.png" alt="Pants Back" class="hover-img">
+      </div>
+      <h3>Double Pleated Chino Trousers</h3>
+      <p>$3223.99</p>
+      <select class="size-selector">
+        <option value="S">Size S</option>
+        <option value="M" selected>Size M</option>
+        <option value="L">Size L</option>
+        <option value="XL">Size XL</option>
+      </select>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="favorite-btn">☆</button>
+    </div>
+
+    <!-- Product Card 2 -->
+    <div class="product-item">
+      <div class="image-container">
+        <img src="../IMG FILES/35.png" alt="Pants Front" class="main-img">
+        <img src="../IMG FILES/36.png" alt="Pants Back" class="hover-img">
+      </div>
+      <h3>Racing Stable Sweatpants</h3>
+      <p>$39.99</p>
+      <select class="size-selector">
+        <option value="S">Size S</option>
+        <option value="M" selected>Size M</option>
+        <option value="L">Size L</option>
+        <option value="XL">Size XL</option>
+      </select>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="favorite-btn">☆</button>
+    </div>
+  </div>
+
                         <div class="product-item">
                 <div class="image-container">
-                    <img src="49.png" alt="Shirt Front" class="main-img">
-                    <img src="50.png" alt="Shirt Back" class="hover-img">
+                    <img src="../IMG FILES/49.png" alt="Shirt Front" class="main-img">
+                    <img src="../IMG FILES/50.png" alt="Shirt Back" class="hover-img">
                 </div>
                 <h3>Prepster Linen Garment Dyed Pant</h3>
                 <p>$8499.99</p>
@@ -331,8 +380,8 @@
     <h2>SHOES</h2>
  <div class="product-item">
                 <div class="image-container">
-                    <img src="19.png" alt="Pants Front" class="main-img">
-                    <img src="20.png" alt="Pants Back" class="hover-img">
+                    <img src="../IMG FILES/19.png" alt="Pants Front" class="main-img">
+                    <img src="../IMG FILES/20.png" alt="Pants Back" class="hover-img">
                 </div>
                 <h3>Lambskin Ankle Boot</h3>
                 <p>$1339.99</p>
@@ -348,8 +397,8 @@
 
             <div class="product-item">
                 <div class="image-container">
-                    <img src="37.png" alt="Shirt Front" class="main-img">
-                    <img src="38.png" alt="Shirt Back" class="hover-img">
+                    <img src="../IMG FILES/37.png" alt="Shirt Front" class="main-img">
+                    <img src="../IMG FILES/38.png" alt="Shirt Back" class="hover-img">
                 </div>
                 <h3>Camino Low Skate Sneakers</h3>
                 <p>$2893.99</p>
@@ -365,8 +414,8 @@
 
             <div class="product-item">
                 <div class="image-container">
-                    <img src=".png" alt="Pants Front" class="main-img">
-                    <img src="60.png" alt="Pants Back" class="hover-img">
+                    <img src="../IMG FILES/59.png" alt="Pants Front" class="main-img">
+                    <img src="../IMG FILES/60.png" alt="Pants Back" class="hover-img">
                 </div>
                 <h3>Mule S</h3>
                 <p>$733.99</p>
@@ -384,8 +433,8 @@
     <h2>Caps</h2>
     <div class="product-item">
     <div class="image-container">
-      <img src="53.png" alt="Shirt Front" class="main-img">
-      <img src="54.png" alt="Shirt Back" class="hover-img">
+      <img src="../IMG FILES/53.png" alt="Shirt Front" class="main-img">
+      <img src="../IMG FILES/54.png" alt="Shirt Back" class="hover-img">
       </div>
       <h3>Chino Cap</h3>
       <p>$290.99</p>
@@ -424,7 +473,7 @@
       section.scrollIntoView({ behavior: 'smooth' });
     }
   </script>
- <script src="cart_fav.js"></script>
+ <script src="../CSS FILES/cart_fav.css"></script>
 </body>
 </html>
 
